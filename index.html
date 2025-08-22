@@ -2,40 +2,144 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./Css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alexander Weinberger</title>
-    <link rel="icon" href="./Assets/icon pin.png">
+    <title>whoami</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <div>
-            <h1 style="text-align: center;">Hello!</h1>
-            <p style="padding: 20px; text-align: center;">I am Alexander C. Weinberger (Alex), and I am a freshman at Northeastern University in Boston, MA.
-                 I am studying computer science, but also have many other interests such as mathematics, financial markets, semiconductor fabrication, and philosophy.
-                <div style="text-align: center; padding: 20px;">
-                    <p>Before I started at Northeastern, I spent the first 18 years of my life in NYC and I attended Bard High School Early College, Manhattan. Please enjoy some photos below from my life.</p>
-                </div>
-                <div class="imgs">
-                    <div>
-                        <img src="./Assets/enjoying life.jpg" style="height: 175px;" alt="Me looking through a telescope at a star party">
-                        <br>Looking through a telescope at a star party</div>
-                    <div>
-                        <img src="./Assets/hike.JPG" style="height:175px;" alt="Photo with friends">
-                        <br>My friends and I while on a hike in Cold Spring, NY
-                    </div>
-                    <div>
-                        <img src="./Assets/hackaton.jpg" style="height:175px;" alt="Hackathon room">
-                        <br>At a hackathon with my friends
-                    </div>
-                </div>
-        </div>
-    <div class="footer">
-        <div class="name">My links</div>
-            <div class="slide-in">
-            <a href="https://github.com/Alexcchip"><img style="transform: translateY(25px); width: 50px; height: 50px;" src="./Assets/icons8-github.svg" alt="GitHub"></a>
-            <a href="https://mail.google.com/mail/?view=cm&source=mailto&to=alexcchip@gmail.com"><img style="transform: translateY(25px); width: 50px; height: 50px;"src="./Assets/email icon.png" alt="Mail Icon"></a>
-            <a href="https://www.linkedin.com/in/alexander-weinberger-756514209/"><img style="transform: translateY(25px); width: 50px; height: 50px;" src="./Assets/linkedin icon.svg" alt="Linkedin Icon"></a>
+    <div class="header">
+        Alex Weinberger <br>
+        <div class="toplinks    ">
+            <div>
+                <a href="index.html">whoami</a>
             </div>
+            <div>
+                <a href="edu.html">edu</a>
+            </div>
+            <div>
+                <a href="cool.html">stuff I find cool</a>
+            </div>
+        </div>
     </div>
+ 
+    
+    <!-- Toggle button -->
+    <div >
+        <!-- <h2 style="text-align: center;">Links/contact info:</h2> -->
+        <div class="contactInfoLinks">
+            <a style="text-decoration: none;" href="https://linkedin.com/in/weinberger-alexander"><img src="/Assets/linkedin icon.svg" alt="Linkedin"></a>
+            <a style="text-decoration: none;" href="https://github.com/Alexcchip"><img src="/Assets/icons8-github.svg" style="scale: 2;" alt="Github"></a>
+            weinberger [dot] al [at] northeastern [dot] edu
+            <div class="beli">
+                <a style="text-decoration: none;" href="https://beliapp.co/app/Alexcchip">beli</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Photo gallery (shown when "More" is collapsed) -->
+    <div id="photoGallery" class="photo-gallery">
+        <div>
+            <h2>whoami</h2>
+            <p style="padding-left: 20px;">I am Alex Weinberger, a CS student at Northeastern University, from NYC. Interests in CS: distributed systems, 
+                <a style="text-decoration: none; color: #8C1515" href="https://cs153.stanford.edu/">infra @ scale</a><sup>*</sup>,
+                mobile dev & DevOps.
+                Interests outside CS: semiconductors<sup>*</sup>, exploring cities, paradoxes, and more.
+            </p>
+        </div>
+        <h2>From my life</h2>
+        <div class="photo-grid">
+            <div class="photo-item">
+                <img src="Assets/AlpsGermany.JPG" alt="Alps Germany">
+                <p>Alps, Germany</p>
+            </div>
+            <div class="photo-item">
+                <img src="Assets/hike.JPG" alt="Hiking">
+                <p>Hiking</p>
+            </div>
+            <div class="photo-item">
+                <img src="Assets/enjoying life.jpg" alt="Enjoying Life">
+                <p>Enjoying Life</p>
+            </div>
+            <div class="photo-item">
+                <img src="Assets/hackaton.jpg" alt="Hackathon">
+                <p>Hackathon</p>
+            </div>
+        </div>
+    </div>
+    
+            <h2>Projects</h2>
+            <div style="width: 80%; margin: 0 auto;" class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header"  id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Cop Or Not
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h3>Tools Used</h3>
+                            <li>MongoDB for the station/report database</li>
+                            <li>Express Js for API requests</li>
+                            <li>React Native with Expo to construct the frontend</li>
+                            <li>Node.js for server-side logic</li>
+                            <li>Render for backend hosting</li>
+                            <li>Expo EAS for frontend hosting</li>
+                            <li>MTA Open Data for mapping/station info</li>
+                            <li>Figma</li>
+                            <h3>Overview</h3>
+                            <p style="padding-left: 20px;">CopOrNot is a React Native application designed to crowdsource the reporting of law enforcement presence at public transportation stations (currently operational in NYC & Boston). By leveraging real-time location tracking, the app offers users an efficient way to log and access reports, promoting transparency and awareness in public spaces. The app ensures a seamless and intuitive experience with dynamic updates and responsive design, making it user-friendly for anyone on the go.</p>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                <img src="Assets/conMap.jpg" alt="CopOrNot Map" style="width: 30%; height: auto; border-radius: 10px;">
+                                <img src="Assets/conHome.jpg" alt="CopOrNot Map" style="width: 30%; height: auto; border-radius: 10px;">
+                                <img src="Assets/conSort.jpg" alt="CopOrNot Map" style="width: 30%; height: auto; border-radius: 10px;">
+                            </div>
+                            <h3>Core Features</h3>
+                            <li>Real time location tracking</li>
+                            <li>Report submission</li>
+                            <li>Report viewing</li>
+                            <li>Report filtering (by station, date, etc.)</li>
+                            <h3>Results thus far (still WIP)</h3>
+                            <p>Ran a test flight amongst friends and had lots of positive feedback</p>
+                            <h3>Next Steps</h3>
+                            <p>To continue working on AI integration, and to expand beyond NYC/Boston, improve responsiveness, deploy to app store and google play, migrate hosting to AWS or GCP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            Platnm
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h3>Tools Used</h3>    
+                            <li>React Native</li>
+                            <li>Go + Fiber (routing)</li>
+                            <li>Nix</li>
+                            <li>Supabase</li>
+                            <li>PostgreSQL</li>
+                            <li>Expo Go</li>
+                            <li>Figma</li>
+                            <h3>Overview</h3>
+                            <p style="padding-left: 20px;">Platnm is your one stop shop for all musical discourse. In the Fall of 2024 I joined Generate as a software engineer, where I worked throughout the stack to help build Platnm. Using Nix as a package manager for cross-platform development, my team and I iterated weekly by working on backend (Go + Fiber) and frontend (React Native + Expo) tickets. By the end of the 4 months of development we had a working MVP that we were able to present to the community at Northeastern, and ultimately hand off to our client.</p>
+                             <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                                <img src="Assets/platnm-review.png" alt="CopOrNot Map" style="width: 30%; height: auto; border-radius: 10px;">
+                                <img src="Assets/platnm-search.png" alt="CopOrNot Map" style="width: 30%; height: auto; border-radius: 10px;">
+                                <img src="Assets/platm-board.png" alt="CopOrNot Map" style="width: 30%; height: auto; border-radius: 10px;">
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+
+    
+
+    <div class="footer">
+        <p>* = more in <a style="text-decoration: none; color: BLACK;" href="cool.html">"stuff I find cool"</a></p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

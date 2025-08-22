@@ -1,0 +1,143 @@
+.header {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    height: 50%;
+    background-color: #4f666a;
+}
+
+.toplinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+
+}
+
+.toplinks a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.toplinks a:hover {
+    color: #ffffff;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contactInfoLinks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.beli {
+    text-decoration: none;
+    color: #134f5c;
+    font-size: 25px;
+    font-family: "toledo-serial";
+}
+
+@font-face {
+    font-family: "toledo-serial";
+    src: url("/Assets/toledo-serial.ttf");
+}
+
+/* Toggle button styles */
+.toggle-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.toggle-btn {
+    background-color: #4f666a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #3a4f53;
+}
+
+/* Photo gallery styles */
+.photo-gallery {
+    margin: 20px 0;
+}
+
+.photo-gallery h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.photo-item {
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* .photo-item:hover {
+    transform: translateY(-5px);
+} */
+
+.photo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.photo-item p {
+    margin: 0;
+    font-weight: bold;
+    color: #333;
+}
+
+/* More section styles */
+.more-section {
+    margin: 20px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 0 15px;
+    }
+    
+    .photo-item img {
+        height: 150px;
+    }
+    
+    .toplinks {
+        gap: 10rem;
+    }
+}
+
