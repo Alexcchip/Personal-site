@@ -2,8 +2,10 @@
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    height: 50%;
+    padding: 10px 0;
     background-color: #4f666a;
+    width: 100%;
+    /* box-sizing: border-box; */
 }
 
 .toplinks {
@@ -24,13 +26,21 @@
     color: #ffffff;
 }
 
+.whoami {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
 .contactInfo {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    padding-top: 20px;
 }
+
 
 .contactInfoLinks {
     display: flex;
@@ -56,6 +66,14 @@
 .toggle-container {
     text-align: center;
     margin: 20px 0;
+}
+
+/* .coolcontainer {
+    padding-left: 50px;
+} */
+
+.coolitem li {
+    padding-left: 25px;
 }
 
 .toggle-btn {
@@ -84,12 +102,14 @@
 }
 
 .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-direction: row;
     gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
 }
 
 .photo-item {
@@ -99,6 +119,9 @@
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    flex-shrink: 0;
+    min-width: 250px;
+    
 }
 
 /* .photo-item:hover {
@@ -127,9 +150,12 @@
 /* Responsive design */
 @media (max-width: 768px) {
     .photo-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 15px;
         padding: 0 15px;
+    }
+    
+    .photo-item {
+        min-width: 200px;
     }
     
     .photo-item img {
@@ -141,3 +167,55 @@
     }
 }
 
+.citation {
+    padding: 20px;
+    margin: 30px 0;
+    border-left: 4px solid #4f666a;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+}
+
+.citation-link {
+    color: #4f666a;
+    text-decoration: none;
+}
+
+.citation-link:hover {
+    text-decoration: underline;
+}
+
+.cool-section {
+    padding-left: 50px;
+}
+
+.class-list {
+    list-style: none;
+    padding-left: 100px;
+    padding-right: 100px;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.class-item {
+    flex: 1 1 200px;
+    text-align: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 2px solid black;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.footer {
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
