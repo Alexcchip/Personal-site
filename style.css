@@ -32,6 +32,12 @@
     font-size: 20px;
 }
 
+.reach-out {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #4f666a;
+}
+
 .contactInfo {
     display: flex;
     flex-direction: column;
@@ -96,6 +102,12 @@
     margin: 20px 0;
 }
 
+.reach-out {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #4f666a;
+}
+
 .photo-gallery h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -152,10 +164,15 @@
     .photo-grid {
         gap: 15px;
         padding: 0 15px;
+        /* Keep horizontal scrolling on mobile */
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
     }
     
     .photo-item {
         min-width: 200px;
+        flex-shrink: 0;
     }
     
     .photo-item img {
@@ -166,13 +183,13 @@
         gap: 10rem;
     }
 
-    /* .cool-section {
-        padding-left: 65px;
+    .cool-section {
+        padding-left: 35px;  /* More padding for bullet points */
     }
 
-    .coolitem li {
-        padding-left: 35px;
-    } */
+    .whoami {
+        padding-left: 35px;  /* More padding for interests section */
+    }
 
     .contactInfoLinks {
         display: flex;
@@ -183,6 +200,21 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+
+    /* Education section horizontal scrolling on mobile */
+.class-list {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    scrollbar-width: none !important;
+}
+
+.class-item {
+    min-width: 250px !important;
+    flex-shrink: 0 !important;
+}
 
 }
 
@@ -206,13 +238,14 @@
 }
 
 .cool-section {
-    padding-left: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .class-list {
     list-style: none;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
     flex-direction: row;
     display: flex;
     flex-wrap: wrap;
@@ -237,4 +270,10 @@
 .footer {
     padding-left: 15px;
     padding-bottom: 15px;
+}
+
+
+.footer-link {
+    text-decoration: none;
+    color: black;
 }
