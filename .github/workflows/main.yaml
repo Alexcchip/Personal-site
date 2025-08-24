@@ -6,6 +6,14 @@ on:
     - main
 
 jobs:
+
+  ci:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v4
+        - name: run lint on html
+          run: npx --yes htmlhint "**/*.html"
+
   deploy:
     runs-on: ubuntu-latest
     steps:
