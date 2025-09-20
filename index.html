@@ -13,13 +13,20 @@
 
 <body>
     <div class="header">
-        <h1> Alex Weinberger</h1>
+        <div class="header-content">
+            <h1>Alex Weinberger</h1>
+            weinberger [dot] al [at] northeastern [dot] edu
+
+            
+        </div>
     </div>
 
 
     <!-- Photo gallery (shown when "More" is collapsed) -->
     <div class="whoami">
         <h2>whoami</h2>
+        <div class="whoami-content">
+            <div class="whoami-text">
         <p>I am Alex Weinberger, a CS student at Northeastern University, from NYC. My
             interests include: distributed systems,
             <a style="text-decoration: none; color: #8C1515" href="https://cs153.stanford.edu/">infra @
@@ -27,17 +34,26 @@
                 mobile dev, DevOps, semiconductors, exploring cities, paradoxes, and more.
                 <span class="reach-out">I am always looking to meet new people and learn new things so please reach out!</span>
             </p>
-        </div>
-        <div class="contactInfoLinks">
-            <a style="text-decoration: none;" href="https://linkedin.com/in/weinberger-alexander"><img
-                src="/Assets/linkedin icon.svg" alt="Linkedin"></a>
-                <a style="text-decoration: none;" href="https://github.com/Alexcchip"><img src="/Assets/icons8-github.svg"
-                        style="scale: 2;" alt="Github"></a>
-                weinberger [dot] al [at] northeastern [dot] edu
-                <div class="beli">
-                    <a style="text-decoration: none;" href="https://beliapp.co/app/Alexcchip">beli</a>
-                </div>
             </div>
+        </div>
+            <div class="image-carousel">
+                <img id="carousel-image" src="" alt="Random image" />
+                <p id="carousel-caption" class="carousel-caption"></p>
+            </div>
+            <div class="contactInfoLinks">
+                <a style="text-decoration: none;" href="https://linkedin.com/in/weinberger-alexander"><img
+                    src="/Assets/linkedin icon.svg" style="scale: 1.5;" alt="Linkedin"></a>
+                    <a style="text-decoration: none;" href="https://github.com/Alexcchip">
+                        <img src="/Assets/icons8-github.svg"
+                            style="scale: 3;" alt="Github"></a>
+                            <div class="beli">
+                                <a style="text-decoration: none; font-size: 40px;" href="https://beliapp.co/app/Alexcchip">beli</a>
+                            </div>
+                            <a id="random-link" href="#" style="text-decoration: none; color: #134f5c;">
+                                Random
+                            </a>
+                </div>
+        </div>
             
             
             <h2 style="padding-left: 15px;">Projects</h2>
@@ -68,14 +84,11 @@
                         way to log and access reports, promoting transparency and awareness in public spaces. The app
                         ensures a seamless and intuitive experience with dynamic updates and responsive design, making
                         it user-friendly for anyone on the go.</p>
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-                            <img src="Assets/conMap.jpg" alt="CopOrNot Map"
-                            style="width: 30%; height: auto; border-radius: 10px;">
-                        <img src="Assets/conHome.jpg" alt="CopOrNot Map"
-                        style="width: 30%; height: auto; border-radius: 10px;">
-                        <img src="Assets/conSort.jpg" alt="CopOrNot Map"
-                        style="width: 30%; height: auto; border-radius: 10px;">
-                    </div>
+                        <div class="project-images">
+                            <img src="Assets/conMap.jpg" alt="CopOrNot Map">
+                            <img src="Assets/conHome.jpg" alt="CopOrNot Home">
+                            <img src="Assets/conSort.jpg" alt="CopOrNot Sort">
+                        </div>
                     <h3>Core Features</h3>
                     <li>Real time location tracking</li>
                     <li>Report submission</li>
@@ -114,19 +127,16 @@
                         iterated weekly by working on backend (Go + Fiber) and frontend (React Native + Expo) tickets.
                         By the end of the 4 months of development we had a working MVP that we were able to present to
                         the community at Northeastern, and ultimately hand off to our client.</p>
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-                            <img src="Assets/platnm-review.png" alt="CopOrNot Map"
-                            style="width: 30%; height: auto; border-radius: 10px;">
-                            <img src="Assets/platnm-search.png" alt="CopOrNot Map"
-                            style="width: 30%; height: auto; border-radius: 10px;">
-                            <img src="Assets/platm-board.png" alt="CopOrNot Map"
-                            style="width: 30%; height: auto; border-radius: 10px;">
+                        <div class="project-images">
+                            <img src="Assets/platnm-review.png" alt="Platnm Review">
+                            <img src="Assets/platnm-search.png" alt="Platnm Search">
+                            <img src="Assets/platm-board.png" alt="Platnm Board">
                         </div>
                 </div>
             </div>
         </div>
     </div>
-    <div>
+    <!-- <div>
         <h2 style="padding: 15px; padding-bottom: 10px;">Edu</h2>
         <div style="padding-left: 15px; padding-top: 15px;">
             <div class="class-list">
@@ -172,7 +182,7 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 
     <div class="cool-section">
         <p>
@@ -276,7 +286,7 @@
         </div>
     </div>
     
-<div id="photoGallery" class="photo-gallery">
+<!-- <div id="photoGallery" class="photo-gallery">
     <h3 style="text-align: center; padding-top: 20px;">Travel, food, and more (scroll left for more!)</h3>
     <div class="photo-grid">
         <div class="photo-item">
@@ -370,7 +380,7 @@
     <img src="Assets/more/hike.jpg" alt="hike">
     <p>Hike w friends</p>
 </div>
-</div>
+</div> -->
 
 <div class="footer">
     <div class="footer-citation">
@@ -381,9 +391,122 @@
     </a>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    
+    <script>
+        const carouselImages = [
+            { src: 'Assets/travel/sibiusquare.JPG', caption: 'Sibiu, Romania' },
+            { src: 'Assets/travel/AlpsGermany.JPG', caption: 'Alps, Germany' },
+            { src: 'Assets/travel/waterfall.JPG', caption: 'Bushkill Falls, Pennsylvania' },
+            { src: 'Assets/travel/Zaandijk.JPG', caption: 'Zaandijk, Netherlands' },
+            { src: 'Assets/travel/londonskyline.JPG', caption: 'Skyline, London' },
+            { src: 'Assets/travel/daunt.JPG', caption: 'Daunt Books, London' },
+            { src: 'Assets/travel/amsplaza.jpg', caption: 'Some plaza, Amsterdam' },
+            { src: 'Assets/romanianbf.JPG', caption: 'Romanian Breakfast' },
+            { src: 'Assets/food/dosa.jpg', caption: 'Dosa, Bandra Bhai, London' },
+            { src: 'Assets/food/sandwhich.JPG', caption: 'Peanut butter sandwich, Boston' },
+            { src: 'Assets/food/matchaice.JPG', caption: 'Matcha Bingsu, Tonchin, NYC' },
+            { src: 'Assets/food/salad.JPG', caption: 'Salad I made, Brooklyn, NY' },
+            { src: 'Assets/food/kebab.JPG', caption: 'Kebab, Munich' },
+            { src: 'Assets/food/krasi.jpg', caption: 'Krasi, Boston' },
+            { src: 'Assets/food/cheesetoast.JPG', caption: 'Cheesetoast, NYC' },
+            { src: 'Assets/food/strawberry.JPG', caption: 'Strawberry, 425 Jean-George, NYC' },
+            { src: 'Assets/more/car.JPG', caption: 'Car w friends' },
+            { src: 'Assets/more/brothergrad.jpg', caption: 'Brother grad' },
+            { src: 'Assets/more/dimsum.JPG', caption: 'Dimsum, NYC' },
+            { src: 'Assets/more/morefood.JPG', caption: 'More food' },
+            { src: 'Assets/more/hike.jpg', caption: 'Hike w friends' }
+        ];
+
+        // Array of cool links from the "An allmagamation of beautiful things & stuff I find cool" section
+        const coolLinks = [
+            "https://www.youtube.com/watch?v=cykgz9nIRtI&list=PLn5EZghpf7wmhcLylx1YLjglm7JTdzZ2A&index=2",
+            "https://www.youtube.com/watch?v=gVYjlmB81Hc&list=RDgVYjlmB81Hc&start_radio=1",
+            "https://cs153.stanford.edu/",
+            "https://www.youtube.com/watch?v=4jDQi9P9UIw",
+            "https://www.youtube.com/watch?v=jB13kCmWT2k",
+            "https://en.wikipedia.org/wiki/Peer-to-peer_file_sharing",
+            "https://www.youtube.com/watch?v=jB13kCmWT2k",
+            "https://www.youtube.com/watch?v=YX40hbAHx3s&list=PLn5EZghpf7wllTDlSFKt62B8SrU4_V47J&index=29",
+            "https://some.3b1b.co/",
+            "https://www.youtube.com/watch?v=wO61D9x6lNY",
+            "https://www.youtube.com/watch?v=jB13kCmWT2k",
+            "https://www.youtube.com/watch?v=RiRyap-EVg0",
+            "https://www.youtube.com/watch?v=5tmGKTNW8DQ&t=593s",
+            "https://www.youtube.com/watch?v=5Ge2RcvDlgw&t=242s",
+            "https://www.youtube.com/watch?v=bf0j26bCbkA&t=833s",
+            "https://www.youtube.com/watch?v=YmVADjUItB4&t=10s",
+            "https://eugeneyan.com/writing/simplicity/"
+        ];
+
+        let currentImageIndex = 0;
+        let currentLinkIndex = 0;
+        const carouselImage = document.getElementById('carousel-image');
+        const carouselCaption = document.getElementById('carousel-caption');
+        const fadeDuration = 1000; // 1 second fade
+        const displayDuration = 3000; // 3 seconds display
+
+        function getRandomImageIndex(len) {
+            let newIndex;
+            do {
+                newIndex = Math.floor(Math.random() * len);
+            } while (newIndex === currentImageIndex);
+            return newIndex;
+        }
+
+        function fadeOut() {
+            carouselImage.style.opacity = '0';
+            carouselCaption.style.opacity = '0';
+        }
+
+        function fadeIn() {
+            carouselImage.style.opacity = '1';
+            carouselCaption.style.opacity = '1';
+        }
+
+        function changeImage() {
+            fadeOut();
+            
+            setTimeout(() => {
+                currentImageIndex = getRandomImageIndex(carouselImages.length);
+                const currentImageData = carouselImages[currentImageIndex];
+                carouselImage.src = currentImageData.src;
+                carouselCaption.textContent = currentImageData.caption;
+                fadeIn();
+            }, fadeDuration / 2);
+        }
+
+        function initCarousel() {
+            currentImageIndex = Math.floor(Math.random() * carouselImages.length);
+            const initialImageData = carouselImages[currentImageIndex];
+            carouselImage.src = initialImageData.src;
+            carouselCaption.textContent = initialImageData.caption;
+            carouselImage.style.opacity = '1';
+            carouselCaption.style.opacity = '1';
+            
+            setInterval(changeImage, displayDuration);
+        }
+
+        function initLink() {
+            currentLinkIndex = getRandomImageIndex(coolLinks.length);
+            const link = document.getElementById("random-link");
+            link.href = coolLinks[currentLinkIndex];
+            link.textContent = "Random";
+            
+            // Change the random link every 5 seconds
+            setInterval(changeRandomLink, 5000);
+        }
+
+        function changeRandomLink() {
+            currentLinkIndex = getRandomImageIndex(coolLinks.length);
+            const link = document.getElementById("random-link");
+            link.href = coolLinks[currentLinkIndex];
+        }
+
+        document.addEventListener("DOMContentLoaded", initLink)
+        document.addEventListener('DOMContentLoaded', initCarousel);
+    </script>
     </body>
     
     </html>
